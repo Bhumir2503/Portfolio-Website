@@ -16,19 +16,35 @@
 
     .left{
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
-            ". . . ."
-            "meInfo meInfo meInfo meInfo"
-            "meInfo meInfo meInfo meInfo"
-            ". download download ."
-            ". . . ."; 
+            ". . . . . . . ."
+            ". meInfo meInfo meInfo meInfo meInfo meInfo meInfo"
+            ". meInfo meInfo meInfo meInfo meInfo meInfo meInfo"
+            ". meInfo meInfo meInfo meInfo meInfo meInfo meInfo"
+            ". . download download download download . ."
+            ". . . . . . . ."; 
         grid-area: left; 
 
         .meInfo{
             grid-area: meInfo;
+
+            h1{
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+
+            h3{
+                font-size: 30px;
+                margin: 0px;
+            }
+            
+            p{
+                font-size: 20px;
+            }
+
         }
 
         .download{
@@ -61,7 +77,29 @@
     }
 
     .right{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: 
+            ". . . ."
+            ". landimg landimg ."
+            ". landimg landimg ."
+            ". landimg landimg ."
+            ". landimg landimg ."
+            ". . . .";
+        grid-area: right;
 
+        .landimg{
+            grid-area: landimg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 600px;
+                width: 600px;
+            }
+        }
     }
     
 }
