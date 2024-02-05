@@ -1,0 +1,67 @@
+.landing{
+    background-color: #fffffe;
+    color: #2b2c34;
+    height: 100vh;
+    font-size: 30;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "left left left left right right right"
+        "left left left left right right right"
+        "left left left left right right right"
+        "left left left left right right right"
+        "left left left left right right right"; 
+
+    .left{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            ". . . ."
+            "meInfo meInfo meInfo meInfo"
+            "meInfo meInfo meInfo meInfo"
+            ". download download ."
+            ". . . ."; 
+        grid-area: left; 
+
+        .meInfo{
+            grid-area: meInfo;
+        }
+
+        .download{
+            grid-area: download;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #6246ea;
+                color: #fffffe;
+                border: none;
+                height: 75px;
+                width: 250px;
+                border-radius: 5px;
+                font-size: 30px;
+                cursor: pointer;
+                
+
+                img{
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 25px;
+                }
+
+            }
+        }
+    }
+
+    .right{
+
+    }
+    
+}
