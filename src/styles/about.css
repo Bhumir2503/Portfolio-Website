@@ -1,0 +1,40 @@
+.About{
+    background-color: #6246ea;
+    color: #fffffe;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+
+        ". Title Title Title ."
+        ". First First First ."
+        ". Second Second Second ."
+        ". . . . ."; 
+
+    .Title{
+        grid-area: Title;
+        font-size: 40px;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+
+        .hand{
+            transform: scaleX(-1);
+        }
+    }
+
+    .First{
+        grid-area: First;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .Second{
+        grid-area: Second;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+}
+
