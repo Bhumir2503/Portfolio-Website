@@ -1,8 +1,22 @@
+import { useEffect, useRef } from 'react';
 import '../styles/landing.css';
 
-function Landing() {
+function Landing({sethomeLocation}) {
+
+  const landingRef = useRef(null);
+
+  useEffect(() => {
+    if (landingRef.current) {
+      const rect = landingRef.current.getBoundingClientRect();
+      const top = rect.top;
+
+      sethomeLocation(top);
+    }
+  }, []);
+
+
   return (
-    <div className="landing">
+    <div className="landing" ref = {landingRef}>
       <div className='left'>
         <div className='meInfo'>
           <h1>Bhumir Patel</h1>

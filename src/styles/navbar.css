@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+  .logo{
+    margin-right: auto;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    margin-left: 2rem;
+
+  }
+  
+  ul {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    margin-right: 3rem;
+    li{
+        margin: 0 2rem;
+        font-size: 20px;
+    }
+  }
+}
