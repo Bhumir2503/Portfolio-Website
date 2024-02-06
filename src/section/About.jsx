@@ -1,10 +1,26 @@
-import "../styles/about.css"
+import "../styles/about.css";
 
 function About() {
   return (
-    <div className="about">
+    <div className="About">
       <h1>About</h1>
-      <p>This is the about page.</p>
+      
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
+      <p>My About details</p>
     </div>
   );
 }
