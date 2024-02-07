@@ -5,9 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fffffe;
-    color: #2b2c34;
-
+    background-color: #FFFFFE;
 
   
   .logo{
@@ -27,9 +25,18 @@
     display: flex;
     list-style: none;
     margin-right: 3rem;
+    color: #2b2c34;
     li{
         margin: 0 2rem;
         font-size: 20px;
+
+        a{
+            text-decoration: none;
+
+            &:visited{
+                color: #2b2c34;
+            }
+        }
     }
   }
 }

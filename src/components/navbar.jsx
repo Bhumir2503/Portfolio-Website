@@ -18,10 +18,10 @@ function Navbar(homeLocation, aboutLocation, projectLocation) {
         <div className="header" ref = {navbarRef}>
             <li className="logo">Bhumir.</li>
             <ul>
-                <li className = "homeNav" style={{color: '#6246ea'}}>Home</li>
+                <li className = "homeNav" style={{color: '#6246ea'}}><a>Home</a></li>
                 <li className="aboutNav"><a href="">About</a></li>
-                <li className="projectNav">Project</li>
-                <li className="contactNav">Contact</li>
+                <li className="projectNav"><a href="">Project</a></li>
+                <li className="contactNav"><a href="">Contact</a></li>
             </ul>
         </div>
     );

@@ -25,7 +25,7 @@ function About({setaboutLocation}) {
       </p>
       <p className="Second">
         This passion led me to pursue higher education at the University of Tennessee, Knoxville, where I majored in Computer Science. 
-        Alongside, I embraced a minor in Math and delved into the intriguing world of machine learning, eager to explore the intersections
+        Alongside, I embraced a minor in mathematics and delved into the intriguing world of machine learning, eager to explore the intersections
         between mathematics and technology. This journey not only solidified my technical skills but also fueled my curiosity to push the 
         boundaries of innovation within the field. I'm constantly seeking new challenges and opportunities to grow, eager to make meaningful 
         contributions to the ever-evolving realm of technology.

@@ -1,21 +1,12 @@
 import "../styles/project.css";
-import { useRef } from "react";
 
-function Project({setprojectLocation}) {
+function Project() {
 
-  const projectRef = useRef(null);
-
-  window.addEventListener('scroll', () => {
-    if (projectRef.current) {
-      const rect = projectRef.current.getBoundingClientRect();
-      const bottom = rect.bottom;
-      setprojectLocation(bottom);
-    }
-  });
 
   return (
-    <div className="Project" ref = {projectRef}>
+    <div className="Project">
       <h1>Project</h1>
+      
     </div>
   );
 }

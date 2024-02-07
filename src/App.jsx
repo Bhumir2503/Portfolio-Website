@@ -16,7 +16,7 @@ function App() {
       <Navbar homeLocation = {homeLocation} aboutLocation = {aboutLocation} projectLocation = {projectLocation}/>
       <Landing sethomeLocation = {sethomeLocation}/>
       <About setaboutLocation = {setaboutLocation}/>
-      <Project setprojectLocation = {setprojectLocation}/>
+      <Project />
     </div>
   )
 }
