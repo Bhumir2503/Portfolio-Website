@@ -63,6 +63,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            a{
+                text-decoration: none;
+            }
             button{
                 display: flex;
                 justify-content: center;
@@ -81,6 +84,11 @@
                     height: 30px;
                     width: 30px;
                     margin-left: 25px;
+                }
+
+                &:hover{
+                    transform: scale(1.05);
+                    transition: 200ms;
                 }
 
             }

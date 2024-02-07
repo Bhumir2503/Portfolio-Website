@@ -23,7 +23,7 @@ function Landing({sethomeLocation}) {
           <p>I craft <strong>elegant</strong> designs and write <strong>clean</strong>, <strong>efficent</strong> code, all while enjoying every moment of it.</p>
         </div>
         <div className='download'>
-          <button>Resume<img src="download.svg" alt="" /></button>
+          <a href="Resume.pdf" download="Bhumir Patel"><button href="">Resume<img src="download.svg" alt="" /></button></a>
         </div>
       </div>
       <div className='right'>
