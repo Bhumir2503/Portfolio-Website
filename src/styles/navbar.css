@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     background-color: #FFFFFE;
-
+    z-index: 5;
   
   .logo{
     margin-right: auto;

@@ -3,6 +3,7 @@ import Navbar from './components/navbar'
 import Landing from './section/Landing'
 import About from './section/About'
 import Project from './section/Project'
+import Contact from './section/Contact'
 
 function App() {
 
@@ -13,10 +14,11 @@ function App() {
 
   return (
     <div>
-      <Navbar homeLocation = {homeLocation} aboutLocation = {aboutLocation} projectLocation = {projectLocation}/>
+      <Navbar homeLocation = {homeLocation} aboutLocation = {aboutLocation} projectLocation = {projectLocation} contactLocation = {contactLocation}/>
       <Landing sethomeLocation = {sethomeLocation}/>
       <About setaboutLocation = {setaboutLocation}/>
-      <Project />
+      <Project setprojectLocation = {setprojectLocation}/>
+      <Contact setcontactLocation = {setcontactLocation}/>
     </div>
   )
 }

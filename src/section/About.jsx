@@ -16,19 +16,20 @@ function About({setaboutLocation}) {
 
   return (
     <div className="About" ref={aboutRef}>
-      <h1 className="Title">Hey There!! <div className="hand">&#128075;</div></h1>
+      <h1 className="Title">Hey There!! <div className="hand">👋</div></h1>
       <p className="First">
-        I'm passionate about technology and innovation, and it all started back in high school when I took a computer science class 
-        that opened up a whole new universe for me. Suddenly, coding felt like decoding a secret language—I couldn't get enough. Late nights turned 
-        into early mornings as I tinkered with programs, debugged endlessly, and felt that rush of satisfaction when everything fell into place. 
-        From that moment on, computer science became more than a hobby; it became a cornerstone of my life.
-      </p>
-      <p className="Second">
-        This passion led me to pursue higher education at the University of Tennessee, Knoxville, where I majored in Computer Science. 
-        Alongside, I embraced a minor in mathematics and delved into the intriguing world of machine learning, eager to explore the intersections
-        between mathematics and technology. This journey not only solidified my technical skills but also fueled my curiosity to push the 
-        boundaries of innovation within the field. I'm constantly seeking new challenges and opportunities to grow, eager to make meaningful 
-        contributions to the ever-evolving realm of technology.
+        I'm deeply passionate about technology and innovation, a flame that was first ignited in high school during a transformative computer 
+        science class. Coding felt like deciphering a secret language, and the late-night sessions of tinkering with programs and debugging fueled 
+        my insatiable curiosity. The satisfaction of seeing everything fall into place marked the beginning of a journey where computer science evolved 
+        from a mere hobby to a fundamental cornerstone of my life.<br /> <br />
+        Building on this foundation, my academic journey led me to the University of Tennessee, Knoxville, where I pursued a major in Computer Science. 
+        Alongside, I delved into the intricacies of mathematics with a minor and explored the captivating world of machine learning. This educational 
+        pursuit allowed me to uncover the dynamic intersections between mathematical principles and cutting-edge technology, solidifying my technical 
+        prowess and igniting a fervor for continual exploration and innovation within the ever-evolving landscape of computer science. <br /> <br />
+        As a seasoned full stack developer, I bring to the table a diverse skill set honed through hands-on experience and a commitment to lifelong 
+        learning. My journey is one of continuous growth, fueled by an unwavering enthusiasm for the limitless possibilities that technology presents. 
+        I am eager to contribute my skills and insights to the dynamic and innovative landscape of the tech industry, ready to take on new challenges 
+        and make meaningful contributions in this ever-evolving field.
       </p>
     </div>
   );
