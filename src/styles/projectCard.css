@@ -1,0 +1,46 @@
+.ProCard{
+    background-color: #d1d1e9;
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 5px;
+
+    h2{
+        font-size: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    p{
+        font-size: 18px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 0px;
+        line-height: 1.75;
+        bold{
+            font-weight: bold;
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        li{
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #6246ea;
+            color: #fffffe;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    }
+}

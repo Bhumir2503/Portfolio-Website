@@ -1,8 +1,33 @@
 .Project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+        ". left right right ."
+        ". left right right ."
+        ". left right right .";
     position: relative;
+ 
+
     .left{
-        position: sticky;
-        top: 80px;
+        grid-area: left;
+        
+        h1{
+            position: sticky;
+            top: 80px;
+            font-size: 40px;
+            margin-top:40px;
+            display: flex;
+            align-items: center;
+        }
     }
 
+    .right{
+        grid-area: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
