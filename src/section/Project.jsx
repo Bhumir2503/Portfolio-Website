@@ -13,7 +13,7 @@ function Project() {
         <ProjectCard 
           className="projectCard"
           title="Maze Generator and Solver"
-          description=" innovative application designed to provide users with an immersive and challenging experience. Leveraging Prim's 
+          description="Innovative application designed to provide users with an immersive and challenging experience. Leveraging Prim's 
           Algorithm, the application generates a variety of maze structures, ensuring each exploration is unique. Additionally, advanced 
           maze-solving capabilities are integrated, featuring algorithms such as Dijkstra's, Depth First Search, and Breadth First Search, 
           enabling users to navigate through the mazes efficiently. Whether for entertainment or problem-solving, the maze project offers 
