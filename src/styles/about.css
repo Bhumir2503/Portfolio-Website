@@ -27,6 +27,7 @@
     .First{
         grid-area: First;
         font-size: 20px;
+        line-height: 1.5;
         margin: 0px;
         margin-bottom: 50px;
     }
