@@ -18,7 +18,7 @@
     font-weight: bold;
     margin-left: 2rem;
     color: #6246ea;
-
+    user-select: none;
   }
   
   ul {
@@ -36,6 +36,11 @@
 
             &:visited{
                 color: #2b2c34;
+            }
+
+            &:hover{
+              text-decoration: underline;
+              text-underline-offset: 5px;
             }
         }
     }

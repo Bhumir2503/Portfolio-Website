@@ -4,16 +4,33 @@
     margin-top: 30px;
     border-radius: 5px;
     
-
-    h2{
-        font-size: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding: 0px;
+    a{
+        text-decoration: none;
+        color: #2b2c34;
         display: flex;
-        align-items: center;
-    }
+        &:visited{
+            color: #2b2c34;
+        }
+    
+        h2{
+            font-size: 30px;
+            margin-left: 40px;
+            margin-right: 40px;
+            padding: 0px;
+            align-items: center;
 
+            &:hover{
+                margin-left: 45px;
+            }
+
+        }
+
+        img{
+            width: 30px;
+        }
+
+
+    }
 
     p{
         font-size: 18px;
@@ -21,9 +38,11 @@
         margin-right: 40px;
         padding: 0px;
         line-height: 1.75;
-        bold{
-            font-weight: bold;
-        }
+
+    }
+
+    .bold{
+        font-weight: bold;
     }
 
     ul{

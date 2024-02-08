@@ -19,6 +19,7 @@ function Project() {
           enabling users to navigate through the mazes efficiently. Whether for entertainment or problem-solving, the maze project offers 
           a captivating journey through intricate and dynamic environments."
           skills={["Python", "C++", "Pygame", "SDL", "Algorithm" ]}
+          link = "https://github.com/Bhumir2503/Maze-Gen-Solver"
         />
         <ProjectCard
           className="projectCard"
@@ -29,6 +30,7 @@ function Project() {
           solutions, showcasing its robust problem-solving capabilities. This project underscores a commitment to excellence in game development 
           and algorithmic proficiency, providing users with a dynamic and intellectually stimulating experience."
           skills={["Python", "Advance Mathematics", "Algorithm", "Pygame"]}
+          link = "https://github.com/Bhumir2503/Sudoku"
         />
         <ProjectCard
           className="projectCard"
@@ -41,6 +43,7 @@ function Project() {
           With a user-friendly interface and robust functionalities, the inventory management system serves as a cornerstone for enhancing productivity 
           and efficiency in inventory management workflows."
           skills={["React", "Node.js", "JavaScript", "HTML/CSS", "MongoDB", "Express.js", "User Authentication"]}
+          link = "https://github.com/Bhumir2503/Inventory-Manager"
         />
         <ProjectCard
           className="projectCard"
@@ -49,6 +52,7 @@ function Project() {
           feature for cross-cultural communication. Designed and established RESTful API endpoints for message handling. Implemented secure 
           user authentication for access control and message attribution."
           skills={["React", "Node.js", "MongoDB", "JavaScript", "HTML/CSS", "Express.js", "RESTful API", "User Authentication"]}
+          link = "https://github.com/Bhumir2503/WorldChat"
         />
       </div>
     </div>
