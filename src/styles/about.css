@@ -33,3 +33,19 @@
 
 }
 
+
+@media screen and (max-width: 1023px){
+    .About{
+        display: flex;
+        flex-direction: column;
+        
+        .Title{
+            margin: 20px 40px;
+        }
+
+        .First{
+            margin: 20px 40px;
+        }
+    }
+}
+

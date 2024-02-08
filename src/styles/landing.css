@@ -251,11 +251,8 @@
             .meInfo{
                 margin-bottom: 50px;
                 h1{
+                    margin-top: 50px;
                 }
-    
-                h3{
-                }
-    
                 p{
                     margin-left: 20px;
                     margin-right: 20px;
@@ -294,5 +291,13 @@
             }
         }
         
+    }
+}
+
+
+
+@media screen and (max-height: 600px){
+    .landing{
+        height: 100%;
     }
 }

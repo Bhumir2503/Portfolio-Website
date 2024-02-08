@@ -32,3 +32,35 @@
         margin-top: 10px;
     }
 }
+
+
+@media screen and (max-width: 1023px){
+    .Project{
+        display: flex;
+        flex-direction: row;
+
+        .left{
+            h1{
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .Project{
+        display: flex;
+        flex-direction: column;
+
+        .left{
+            h1{
+                margin-left: 40px;
+            }
+        }
+
+        .right{
+            margin-left: 20px;
+        }
+    }
+}

@@ -64,3 +64,18 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1023px){
+    .ProCard{
+        width: 70%;
+    }
+}
+
+
+@media  screen and (max-width: 767px){
+    .ProCard{
+        width: 90%;
+    }
+    
+}
