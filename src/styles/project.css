@@ -1,0 +1,8 @@
+.Project{
+    position: relative;
+    .left{
+        position: sticky;
+        top: 80px;
+    }
+
+}
