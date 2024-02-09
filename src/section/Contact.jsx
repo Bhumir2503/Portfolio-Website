@@ -1,36 +1,20 @@
 import '../styles/contact.css';
-import { useState } from 'react';
+import { useRef } from 'react';
 
-function Contact(contactLocation) {
+function Contact({setcontactLocation}) {
 
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [name, setName] = useState('');
+  const contactRef = useRef(null);
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs.send("service_jrdv80k","template_l23gxh8",{
-      from_name: name,
-      message: message,
-      email: email,
-    });
-  }
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
+  window.addEventListener('scroll', () => {
+    if (contactRef.current) {
+      const rect = contactRef.current.getBoundingClientRect();
+      const top = rect.top;
+      setcontactLocation(top);
+    }
+  });
 
   return (
-    <div className='Contact'>
+    <div className='Contact' ref={contactRef}>
       <h1>Connect With Me.</h1>
       <div className='icons'>
         <a target='_blank' href="https://github.com/bhumir2503"><img src="github.svg" alt="" /></a>

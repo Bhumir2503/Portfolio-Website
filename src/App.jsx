@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <Navbar homeLocation = {homeLocation} aboutLocation = {aboutLocation} projectLocation = {projectLocation} contactLocation = {contactLocation}/>
+      <Navbar homeLocation = {homeLocation} aboutLocation = {aboutLocation} contactLocation = {contactLocation} projectLocation = {projectLocation}/>
       <Landing sethomeLocation = {sethomeLocation}/>
       <About setaboutLocation = {setaboutLocation}/>
       <Project setprojectLocation = {setprojectLocation}/>

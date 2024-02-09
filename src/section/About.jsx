@@ -8,8 +8,8 @@ function About({setaboutLocation}) {
   window.addEventListener('scroll', () => {
     if (aboutRef.current) {
       const rect = aboutRef.current.getBoundingClientRect();
-      const bottom = rect.bottom;
-      setaboutLocation(bottom);
+      const top = rect.top;
+      setaboutLocation(top);
     }
   });
 

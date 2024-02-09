@@ -9,8 +9,8 @@ function Landing({sethomeLocation}) {
   window.addEventListener('scroll', () => {
     if (landingRef.current) {
       const rect = landingRef.current.getBoundingClientRect();
-      const bottom = rect.bottom;
-      sethomeLocation(bottom);
+      const top = rect.top;
+      sethomeLocation(top);
     }
   });
 

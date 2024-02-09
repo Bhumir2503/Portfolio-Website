@@ -1,11 +1,23 @@
 import "../styles/project.css";
 import ProjectCard from "../components/projectCard";
+import {useRef} from 'react';
 
-function Project() {
+function Project({setprojectLocation}) {
+
+    const projectRef = useRef(null);
+
+    window.addEventListener('scroll', () => {
+      if (projectRef.current) {
+        const rect = projectRef.current.getBoundingClientRect();
+        const top = rect.top;
+        setprojectLocation(top);
+      }
+    });
+
 
 
   return (
-    <div className="Project">
+    <div className="Project" ref = {projectRef}>
       <div className="left">
         <h1>Projects</h1>
       </div>
