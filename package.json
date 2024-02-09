@@ -2,6 +2,7 @@
   "name": "website-resume-v3",
   "private": true,
   "version": "0.0.0",
+  "homepage": "bhumir.com",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
