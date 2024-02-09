@@ -17,7 +17,7 @@ function Project({setprojectLocation}) {
 
 
   return (
-    <div className="Project" ref = {projectRef}>
+    <div className="Project" id = "Project" ref = {projectRef}>
       <div className="left">
         <h1>Projects</h1>
       </div>

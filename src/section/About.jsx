@@ -5,17 +5,8 @@ function About({setaboutLocation}) {
 
   const aboutRef = useRef(null);
 
-  window.addEventListener('scroll', () => {
-    if (aboutRef.current) {
-      const rect = aboutRef.current.getBoundingClientRect();
-      const top = rect.top;
-      setaboutLocation(top);
-    }
-  });
-
-
   return (
-    <div className="About" ref={aboutRef}>
+    <div className="About" id="About" ref={aboutRef}>
       <h1 className="Title">Hey There!! <div className="hand">👋</div></h1>
       <p className="First">
         I'm deeply passionate about technology and innovation, a flame that was first ignited in high school during a transformative computer 
