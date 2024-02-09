@@ -29,12 +29,12 @@
     li{
         margin: 0 2rem;
         font-size: 20px;
-
+        color: #6246ea;
         a{
             text-decoration: none;
 
             &:visited{
-                color: #2b2c34;
+                color: #6246ea;
             }
 
             &:hover{

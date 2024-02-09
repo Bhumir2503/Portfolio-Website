@@ -16,7 +16,7 @@ function Navbar(props) {
         <div className="header" ref = {navbarRef}>
             <li className="logo">Bhumir.</li>
             <ul id = "click">
-                <li className = "homeNav" style={{color: '#6246ea'}}><a href="#landing">Home</a></li>
+                <li className = "homeNav"><a href="#landing">Home</a></li>
                 <li className="aboutNav"><a href="#About">About</a></li>
                 <li className="projectNav"><a href="#Project">Project</a></li>
                 <li className="contactNav"><a href="#Contact">Contact</a></li>
