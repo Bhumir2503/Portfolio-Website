@@ -46,7 +46,7 @@ function Project({setprojectLocation}) {
         />
         <ProjectCard
           className="projectCard"
-          title="Inventory Management System"
+          title="Inventory Tracker"
           description="The inventory management system represents a culmination of meticulous design and implementation, aimed at streamlining the process 
           of handling inventory data efficiently. Through the utilization of a robust MongoDB database, the system provides a reliable foundation for 
           storing and managing inventory data with optimal performance and scalability. Building upon this foundation, a secure and scalable backend 
@@ -55,16 +55,18 @@ function Project({setprojectLocation}) {
           With a user-friendly interface and robust functionalities, the inventory management system serves as a cornerstone for enhancing productivity 
           and efficiency in inventory management workflows."
           skills={["React", "Node.js", "JavaScript", "HTML/CSS", "MongoDB", "Express.js", "User Authentication"]}
-          link = "https://github.com/Bhumir2503/Inventory-Manager"
+          link = "https://github.com/Bhumir2503/Inventory-Tracker"
         />
         <ProjectCard
           className="projectCard"
-          title="Real Time Chat Application"
-          description="Developed real-time chat application using React, Node.js, Express.js, and MongoDB. Integrated automatic translation 
-          feature for cross-cultural communication. Designed and established RESTful API endpoints for message handling. Implemented secure 
-          user authentication for access control and message attribution."
-          skills={["React", "Node.js", "MongoDB", "JavaScript", "HTML/CSS", "Express.js", "RESTful API", "User Authentication"]}
-          link = "https://github.com/Bhumir2503/WorldChat"
+          title="Budget Tracker"
+          description="Our budget planner is a versatile tool designed to help users manage their finances seamlessly across different platforms. Built 
+          with ReactJS for web and React Native for mobile, it offers a unified experience whether accessed from a desktop browser or a smartphone. With 
+          intuitive interfaces tailored to each platform, users can easily track expenses, set budgets, and visualize their financial goals. By harnessing 
+          the power of ReactJS and React Native, our budget planner ensures a consistent and efficient user experience, empowering individuals to take control 
+          of their finances wherever they go."
+          skills={["ReactJS", "React Native", "Node.js", "MongoDB", "JavaScript", "HTML/CSS", "Express.js", "User Authentication"]}
+          link = "https://github.com/Bhumir2503/Budget-Tracker"
         />
       </div>
     </div>
