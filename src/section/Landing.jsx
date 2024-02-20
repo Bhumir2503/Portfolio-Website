@@ -15,7 +15,7 @@ function Landing({sethomeLocation}) {
   });
 
   return (
-    <div className="landing" ref = {landingRef}>
+    <div className="landing" id='landing' ref = {landingRef}>
       <div className='left'>
         <div className='meInfo'>
           <h1>Bhumir Patel</h1>

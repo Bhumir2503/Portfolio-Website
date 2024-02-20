@@ -14,7 +14,7 @@ function Contact({setcontactLocation}) {
   });
 
   return (
-    <div className='Contact' ref={contactRef}>
+    <div className='Contact' id='Contact' ref={contactRef}>
       <h1>Connect With Me.</h1>
       <div className='icons'>
         <a target='_blank' href="https://github.com/bhumir2503"><img src="github.svg" alt="" /></a>
