@@ -1,303 +1,483 @@
-.landing{
-    height: 100vh;
-    font-size: 30;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px; 
-    grid-template-areas: 
-        "left left left left right right right"
-        "left left left left right right right"
-        "left left left left right right right"
-        "left left left left right right right"
-        "left left left left right right right"; 
-
-    .left{
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-            ". . . . . . . ."
-            ". meInfo meInfo meInfo meInfo meInfo meInfo ."
-            ". meInfo meInfo meInfo meInfo meInfo meInfo ."
-            ". meInfo meInfo meInfo meInfo meInfo meInfo ."
-            ". . download download download download . ."
-            ". . . . . . . ."; 
-        grid-area: left; 
-
-        .meInfo{
-            grid-area: meInfo;
-            margin-top: auto;
-            margin-bottom: auto;
-            
-            h1{
-                font-size: 100px;
-                margin: 0px;
-                text-align: center;
-                color: #6246ea;
-            }
-
-            h3{
-                font-size: 40px;
-                margin: 0px;
-                text-align: center;
-                margin-bottom: 50px;
-                /* color: #6246ea; */
-            }
-
-            p{
-                font-size: 30px;
-                margin: 0px;
-                text-align: center;
-            }
-
-            strong{
-                color: #6246ea;
-            }
-            
-        }
-
-        .download{
-            grid-area: download;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a{
-                text-decoration: none;
-            }
-            button{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #6246ea;
-                color: #fffffe;
-                border: none;
-                height: 75px;
-                width: 250px;
-                border-radius: 5px;
-                font-size: 30px;
-                cursor: pointer;
-                
-
-                img{
-                    height: 30px;
-                    width: 30px;
-                    margin-left: 25px;
-                }
-
-                &:hover{
-                    transform: scale(1.05);
-                    transition: 200ms;
-                }
-
-            }
-        }
-    }
-
-    .right{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 0px 0px;
-        grid-template-areas: 
-            ". . . ."
-            ". landimg landimg ."
-            ". landimg landimg ."
-            ". landimg landimg ."
-            ". landimg landimg ."
-            ". . . .";
-        grid-area: right;
-
-        .landimg{
-            grid-area: landimg;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                height: 600px;
-                width: 600px;
-            }
-        }
-    }
-    
+/* Landing.css - Dark Theme */
+.landing {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	padding-top: 70px;
+	background: var(--bg-primary);
 }
 
-@media screen and (max-width: 1439px) {
-    .landing{
-    
-        .left{
-
-    
-            .meInfo{
-                
-                h1{
-                    font-size: 80px;
-                }
-    
-                h3{
-                    font-size: 30px;
-                }
-    
-                p{
-                    font-size: 25px;
-
-                }
-
-                
-            }
-    
-            .download{
-
-                button{
-                    height: 70px;
-                    width: 240px;
-                    font-size: 25px;
-
-                    img{
-                        height: 25px;
-                        width: 25px;
-                    }
-    
-                    &:hover{
-                        transform: scale(1.05);
-                        transition: 200ms;
-                    }
-    
-                }
-            }
-        }
-    
-        .right{
-            .landimg{
-                img{
-                    height: 450px;
-                    width: 450px;
-                }
-            }
-        }
-        
-    }
-    
+/* Background elements */
+.landing-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	overflow: hidden;
 }
 
-@media screen and (max-width: 1023px){
-    .landing{
-    
-        .left{
-
-    
-            .meInfo{
-                
-                h1{
-                    font-size: 60px;
-                }
-    
-                h3{
-                    font-size: 25px;
-                }
-    
-                p{
-                    font-size: 20px;
-
-                }
-
-                
-            }
-    
-            .download{
-
-                button{
-                    height: 70px;
-                    width: 240px;
-                    font-size: 25px;
-
-                    img{
-                        height: 25px;
-                        width: 25px;
-                    }
-    
-                    &:hover{
-                        transform: scale(1.05);
-                        transition: 200ms;
-                    }
-    
-                }
-            }
-        }
-    
-        .right{
-            .landimg{
-                img{
-                    width: 350px;
-                    height: 350px;
-                }
-            }
-        }
-        
-    }
+.shape {
+	position: absolute;
+	background: linear-gradient(
+		135deg,
+		rgba(98, 70, 234, 0.15) 0%,
+		rgba(159, 128, 255, 0.05) 100%
+	);
+	border-radius: 50%;
+	filter: blur(60px);
 }
 
-@media screen and (max-width: 767px){
-    .landing{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        .left{
-            display: flex;
-            flex-direction: column;
-    
-            .meInfo{
-                margin-bottom: 50px;
-                h1{
-                    margin-top: 50px;
-                }
-                p{
-                    margin-left: 20px;
-                    margin-right: 20px;
-                }
-
-                
-            }
-    
-            .download{
-                margin-bottom: 50px;
-                button{
-                    height: 60px;
-                    width: 200px;
-                    font-size: 20px;
-
-                    img{
-                        height: 20px;
-                        width: 20px;
-                    }
-    
-                    &:hover{
-                        transform: scale(1.05);
-                        transition: 200ms;
-                    }
-    
-                }
-            }
-        }
-    
-        .right{
-            .landimg{
-                img{
-                    display: none;
-
-                }
-            }
-        }
-        
-    }
+.shape-1 {
+	width: 400px;
+	height: 400px;
+	top: -100px;
+	right: -100px;
 }
 
+.shape-2 {
+	width: 300px;
+	height: 300px;
+	bottom: -50px;
+	left: -50px;
+	background: linear-gradient(
+		135deg,
+		rgba(13, 211, 163, 0.1) 0%,
+		rgba(13, 211, 163, 0.05) 100%
+	);
+}
 
+.shape-3 {
+	width: 200px;
+	height: 200px;
+	top: 30%;
+	left: 10%;
+	opacity: 0.2;
+}
 
-@media screen and (max-height: 600px){
-    .landing{
-        height: 100%;
-    }
+.shape-4 {
+	width: 150px;
+	height: 150px;
+	bottom: 20%;
+	right: 20%;
+	opacity: 0.15;
+	background: linear-gradient(
+		135deg,
+		rgba(255, 100, 146, 0.2) 0%,
+		rgba(255, 100, 146, 0.05) 100%
+	);
+}
+
+/* Landing Content */
+.landing-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: 2rem 0;
+}
+
+.landing-content {
+	flex: 1;
+	max-width: 600px;
+}
+
+.landing-heading {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+	line-height: 1.1;
+}
+
+.landing-subtitle {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	color: var(--text-secondary);
+}
+
+.landing-description {
+	font-size: 1.2rem;
+	margin-bottom: 2.5rem;
+	color: var(--text-secondary);
+}
+
+.landing-description .highlight {
+	color: var(--primary);
+	font-weight: 600;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.landing-description .highlight:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -2px;
+	left: 0;
+	background-color: var(--primary);
+	transition: width 0.3s ease;
+}
+
+.landing-description .highlight:hover:after {
+	width: 100%;
+}
+
+/* Landing.css - Button Hover Fix */
+
+/* Ensure the landing-cta has the right positioning */
+.landing-cta {
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+	margin-top: 2rem;
+}
+
+/* Primary button styling */
+.primary-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 1.8rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+	outline: none;
+	background-color: var(--primary);
+	color: white !important; /* Force white text color */
+	box-shadow: 0 4px 12px rgba(137, 100, 255, 0.3);
+	position: relative;
+	z-index: 10;
+	text-decoration: none;
+}
+
+.primary-button:hover {
+	background-color: var(--primary-dark);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 16px rgba(137, 100, 255, 0.4);
+	color: white !important; /* Force white text on hover */
+}
+
+.primary-button span {
+	color: white !important; /* Ensure the text inside stays white */
+}
+
+/* Secondary button styling */
+.secondary-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 1.8rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background-color: transparent;
+	color: var(--text-primary) !important;
+	border: 2px solid var(--primary);
+	margin-left: 1rem;
+	position: relative;
+	z-index: 10;
+	text-decoration: none;
+}
+
+.secondary-button:hover {
+	background-color: var(--primary);
+	color: white !important; /* Force white text on hover */
+	transform: translateY(-3px);
+}
+
+.secondary-button span {
+	transition: color 0.3s ease;
+}
+
+.secondary-button:hover span {
+	color: white !important;
+}
+
+/* Icons styling for buttons */
+.download-icon,
+.arrow-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	position: relative;
+	z-index: 11;
+}
+
+/* Actual SVG icons - replace with your SVG paths or use a different approach */
+.download-icon {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'%3E%3C/path%3E%3Cpolyline points='7 10 12 15 17 10'%3E%3C/polyline%3E%3Cline x1='12' y1='15' x2='12' y2='3'%3E%3C/line%3E%3C/svg%3E");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.arrow-icon {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a4a6b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: all 0.3s ease;
+}
+
+/* Change arrow color on hover */
+.secondary-button:hover .arrow-icon {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+	transform: translateX(5px);
+}
+
+/* Ensure the landing image doesn't overlap with buttons */
+.landing-image {
+	position: relative;
+	z-index: 1;
+}
+
+.image-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1.15); /* Scale up the entire wrapper */
+}
+
+.image-wrapper::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		rgba(137, 100, 255, 0.1) 0%,
+		rgba(15, 17, 23, 0) 70%
+	);
+	transform: scale(1.3); /* Increased from 1.2 */
+	z-index: -1;
+}
+
+.landing-image img {
+	width: 90%; /* Increased from 80% */
+	max-width: 650px; /* Increased from 500px */
+	height: auto;
+	filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+	transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.landing-image img:hover {
+	transform: scale(1.05) rotate(2deg);
+	filter: drop-shadow(0 15px 40px rgba(137, 100, 255, 0.3));
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+	opacity: 1;
+}
+
+.scroll-indicator-text {
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	margin-bottom: 0.5rem;
+}
+
+.scroll-indicator-line {
+	width: 2px;
+	height: 50px;
+	background-color: var(--primary);
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-indicator-line::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-light);
+	animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+/* Animation classes */
+.landing-heading,
+.landing-subtitle,
+.landing-description,
+.landing-cta,
+.landing-image {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.landing-image {
+	transform: translateX(30px);
+}
+
+.landing-heading.visible,
+.landing-subtitle.visible,
+.landing-description.visible,
+.landing-cta.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.landing-image.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.landing-subtitle.visible {
+	transition-delay: 0.2s;
+}
+
+.landing-description.visible {
+	transition-delay: 0.4s;
+}
+
+.landing-cta.visible {
+	transition-delay: 0.6s;
+}
+
+.landing-image.visible {
+	transition-delay: 0.8s;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+	.landing-heading {
+		font-size: 3.5rem;
+	}
+
+	.landing-subtitle {
+		font-size: 1.8rem;
+	}
+	.landing-image img {
+		max-width: 550px;
+	}
+}
+
+@media (max-width: 992px) {
+	.landing-heading {
+		font-size: 3rem;
+	}
+
+	.landing-subtitle {
+		font-size: 1.5rem;
+	}
+
+	.landing-description {
+		font-size: 1.1rem;
+	}
+	.landing-image img {
+		width: 85%;
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 768px) {
+	.landing-container {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		padding-top: 2rem;
+	}
+
+	.landing-content {
+		max-width: 100%;
+		margin-bottom: 3rem;
+	}
+
+	.landing-heading {
+		font-size: 2.8rem;
+	}
+
+	.landing-cta {
+		justify-content: center;
+	}
+
+	.landing-image {
+		width: 100%;
+	}
+
+	.landing-image img {
+		width: 80%;
+		max-width: 400px;
+	}
+	.shape-1 {
+		width: 200px;
+		height: 200px;
+	}
+
+	.shape-2 {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 576px) {
+	.landing {
+		padding-top: 60px;
+	}
+
+	.landing-heading {
+		font-size: 2.5rem;
+	}
+
+	.landing-subtitle {
+		font-size: 1.3rem;
+	}
+
+	.landing-description {
+		font-size: 1rem;
+	}
+
+	.landing-cta {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.secondary-button {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	.landing-image img {
+		width: 90%;
+		max-width: 350px;
+	}
+
+	.scroll-indicator {
+		display: none;
+	}
 }

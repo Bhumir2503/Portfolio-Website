@@ -1,0 +1,269 @@
+/* App.css - Dark Theme */
+:root {
+	--primary: #8964ff;
+	--primary-light: #9f80ff;
+	--primary-dark: #6246ea;
+	--secondary: #0dd3a3;
+	--text-primary: #e8e9f3;
+	--text-secondary: #a4a6b8;
+	--bg-primary: #0f1117;
+	--bg-secondary: #181a23;
+	--bg-tertiary: #242736;
+	--accent: #ff6492;
+	--border: #2e3244;
+	--card-bg: #1a1d29;
+	--font-sans: "Inter", "Helvetica Neue", sans-serif;
+	--transition-base: 0.3s ease;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	margin: 0;
+	padding: 0;
+	color: var(--text-primary);
+	background-color: var(--bg-primary);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	margin-top: 0;
+	color: var(--text-primary);
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary);
+	transition: color var(--transition-base);
+}
+
+a:hover {
+	color: var(--primary-light);
+}
+
+p {
+	margin-bottom: 1rem;
+	color: var(--text-secondary);
+}
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+/* Text Utilities */
+.text-gradient {
+	background: linear-gradient(to right, var(--primary), var(--primary-light));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.highlight {
+	color: var(--primary);
+	font-weight: 600;
+	position: relative;
+}
+
+/* Section Styles */
+section {
+	padding: 5rem 0;
+}
+
+.section-header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+	display: inline-block;
+	color: var(--text-primary);
+}
+
+.section-title::after {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 4px;
+	background-color: var(--primary);
+	bottom: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.section-subtitle {
+	font-size: 1.2rem;
+	color: var(--text-secondary);
+	margin-top: 1.5rem;
+}
+
+/* Button Styles */
+.primary-button,
+.secondary-button,
+.view-more-button,
+.submit-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 1.8rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all var(--transition-base);
+	border: none;
+	outline: none;
+}
+
+.primary-button {
+	background-color: var(--primary);
+	color: white;
+	box-shadow: 0 4px 12px rgba(137, 100, 255, 0.3);
+}
+
+.primary-button:hover {
+	background-color: var(--primary-light);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 16px rgba(137, 100, 255, 0.4);
+}
+
+.secondary-button {
+	background-color: transparent;
+	color: var(--text-primary);
+	border: 2px solid var(--primary);
+	margin-left: 1rem;
+}
+
+.secondary-button:hover {
+	background-color: var(--primary);
+	color: white;
+	transform: translateY(-3px);
+}
+
+/* Animation Styles */
+.animate {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Icons */
+.icon {
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+}
+
+.download-icon,
+.arrow-icon,
+.github-icon,
+.send-icon,
+.arrow-up-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: brightness(0) invert(1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-dark);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--primary);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+	.section-title {
+		font-size: 2.2rem;
+	}
+}
+
+@media (max-width: 992px) {
+	section {
+		padding: 4rem 0;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.section-subtitle {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	section {
+		padding: 3rem 0;
+	}
+
+	.section-title {
+		font-size: 1.8rem;
+	}
+
+	.container {
+		padding: 0 1rem;
+	}
+
+	.primary-button,
+	.secondary-button {
+		padding: 0.7rem 1.5rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.section-title {
+		font-size: 1.6rem;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
+	}
+}
