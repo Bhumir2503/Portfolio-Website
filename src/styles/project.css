@@ -113,7 +113,7 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	background: linear-gradient(to right, var(--primary), var(--primary-light));
+	background: linear-gradient(to right, var(--secondary), var(--secondary));
 	color: white;
 	padding: 8px 16px;
 	border-radius: 30px;

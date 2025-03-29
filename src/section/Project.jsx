@@ -136,7 +136,7 @@ function Projects() {
 				{featuredProject && (
 					<div className="featured-project animate">
 						<div className="featured-project-badge">
-							Featured Project
+							Ongoing
 						</div>
 						<div
 							className="featured-project-visual"
