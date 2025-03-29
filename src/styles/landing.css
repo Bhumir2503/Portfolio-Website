@@ -266,8 +266,7 @@
 }
 
 .landing-image img {
-	width: 90%; /* Increased from 80% */
-	max-width: 650px; /* Increased from 500px */
+	width: 100%; /* Increased from 80% */
 	height: auto;
 	filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 	transition: transform 0.5s ease, filter 0.5s ease;
@@ -383,7 +382,8 @@
 		font-size: 1.8rem;
 	}
 	.landing-image img {
-		max-width: 550px;
+		width: 90%;
+		height: auto;
 	}
 }
 
@@ -400,8 +400,8 @@
 		font-size: 1.1rem;
 	}
 	.landing-image img {
-		width: 85%;
-		max-width: 450px;
+		width: 90%;
+		height: auto;
 	}
 }
 
@@ -431,8 +431,9 @@
 	}
 
 	.landing-image img {
-		width: 80%;
+		width: 50%;
 		max-width: 400px;
+		height: auto;
 	}
 	.shape-1 {
 		width: 200px;
@@ -473,8 +474,9 @@
 	}
 
 	.landing-image img {
-		width: 90%;
+		width: 60%;
 		max-width: 350px;
+		height: auto;
 	}
 
 	.scroll-indicator {
