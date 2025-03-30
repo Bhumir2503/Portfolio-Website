@@ -90,7 +90,7 @@ function Projects() {
 				"Web Animation",
 				"Dark Theme",
 			],
-			link: "https://github.com/Bhumir2503/Website-Resume-V3",
+			link: "https://github.com/Bhumir2503/Portfolio-Website",
 			delay: 0.1,
 		},
 		{
@@ -135,9 +135,7 @@ function Projects() {
 
 				{featuredProject && (
 					<div className="featured-project animate">
-						<div className="featured-project-badge">
-							Ongoing
-						</div>
+						<div className="featured-project-badge">Ongoing</div>
 						<div
 							className="featured-project-visual"
 							style={{ background: featuredProject.bgColor }}
