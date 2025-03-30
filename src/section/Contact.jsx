@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import "../styles/contact.css";
+import emailjs from "@emailjs/browser";
+import "../styles/Contact.css";
 
 function Contact() {
 	const sectionRef = useRef(null);
+	const form = useRef();
 	const [formState, setFormState] = useState({
 		name: "",
 		email: "",
 		message: "",
 	});
 	const [formStatus, setFormStatus] = useState(null);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	useEffect(() => {
 		const observerOptions = {
@@ -56,19 +59,35 @@ function Contact() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// This would be replaced with actual form submission logic
-		// For demo purposes, we're just showing a success message
-		setFormStatus("success");
+		setIsSubmitting(true);
+		setFormStatus("sending");
 
-		// Reset form after delay
-		setTimeout(() => {
-			setFormState({
-				name: "",
-				email: "",
-				message: "",
+		// Replace with your actual EmailJS details
+		emailjs
+			.sendForm("service_1lam0ul", "template_gi8oanf", form.current, {
+				publicKey: "Jd1niSmiP8rniHX1Y",
+			})
+			.then((result) => {
+				console.log("Email sent successfully:", result.text);
+				setFormStatus("success");
+				setFormState({
+					name: "",
+					email: "",
+					message: "",
+				});
+			})
+			.catch((error) => {
+				console.error("Email sending failed:", error.text);
+				setFormStatus("error");
+			})
+			.finally(() => {
+				setIsSubmitting(false);
+
+				// Reset status after delay
+				setTimeout(() => {
+					setFormStatus(null);
+				}, 5000);
 			});
-			setFormStatus(null);
-		}, 3000);
 	};
 
 	const socialLinks = [
@@ -159,7 +178,11 @@ function Contact() {
 					</div>
 
 					<div className="contact-form-container animate">
-						<form className="contact-form" onSubmit={handleSubmit}>
+						<form
+							className="contact-form"
+							ref={form}
+							onSubmit={handleSubmit}
+						>
 							<div className="form-header">
 								<h3>Send Me a Message</h3>
 								<p>
@@ -215,12 +238,24 @@ function Contact() {
 								className={`submit-button ${
 									formStatus ? formStatus : ""
 								}`}
+								disabled={isSubmitting}
 							>
-								{formStatus === "success"
+								{formStatus === "sending"
+									? "Sending..."
+									: formStatus === "success"
 									? "Message Sent!"
+									: formStatus === "error"
+									? "Failed to Send"
 									: "Send Message"}
 								<i className="send-icon"></i>
 							</button>
+
+							{formStatus === "error" && (
+								<p className="error-message">
+									There was an error sending your message.
+									Please try again later.
+								</p>
+							)}
 						</form>
 					</div>
 				</div>

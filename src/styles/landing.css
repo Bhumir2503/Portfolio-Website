@@ -469,7 +469,8 @@
 	}
 
 	.secondary-button {
-		margin-left: 0;
+		margin-left: 1rem;
+		margin-right: 1rem;
 		margin-top: 1rem;
 	}
 

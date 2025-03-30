@@ -279,6 +279,21 @@
 .submit-button.success {
 	background-color: var(--secondary);
 	pointer-events: none;
+}/* Add to your Contact.css */
+.submit-button.sending {
+  background-color: #767676;
+  pointer-events: none;
+}
+
+.submit-button.error {
+  background-color: #d64045;
+  pointer-events: none;
+}
+
+.error-message {
+  color: #d64045;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .send-icon {
