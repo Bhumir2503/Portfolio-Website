@@ -1,8 +1,9 @@
-/* About.css - Dark Theme */
+/* About.css - Dark Theme with Proficiency Dots */
 .about {
 	background-color: var(--bg-secondary);
 	position: relative;
 	overflow: hidden;
+	padding: 6rem 0;
 }
 
 .about::before {
@@ -42,6 +43,43 @@
 .about-container {
 	position: relative;
 	z-index: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.section-header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+	display: inline-block;
+	color: var(--text-primary);
+}
+
+.section-title::after {
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 4px;
+	background: linear-gradient(to right, var(--primary), var(--primary-light));
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.section-subtitle {
+	font-size: 1.2rem;
+	color: var(--text-secondary);
+	margin-top: 1.5rem;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .about-content {
@@ -52,7 +90,7 @@
 
 .about-text {
 	flex: 1;
-	min-width: 320px;
+	min-width: 300px;
 }
 
 .about-paragraph {
@@ -66,14 +104,27 @@
 	margin-bottom: 0;
 }
 
+.highlight {
+	color: var(--primary);
+	font-weight: 600;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed rgba(98, 70, 234, 0.3);
+	transition: all 0.3s ease;
+}
+
+.highlight:hover {
+	color: var(--primary-light);
+	border-bottom-color: var(--primary-light);
+}
+
 .about-skills {
 	flex: 1;
-	min-width: 320px;
+	min-width: 300px;
 }
 
 .skills-title {
 	font-size: 1.5rem;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 	color: var(--text-primary);
 	position: relative;
 }
@@ -89,55 +140,152 @@
 	border-radius: 2px;
 }
 
-.skills-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+/* Skills container layout */
+.skills-container {
+	display: flex;
+	flex-direction: column;
 	gap: 2rem;
 }
 
-.skill-category {
-	margin-bottom: 1.5rem;
+.frontend-category {
+	width: 100%;
 }
 
-.category-title {
-	font-size: 1.1rem;
+.secondary-skills {
+	display: flex;
+	gap: 2rem;
+}
+
+.backend-category,
+.tools-category {
+	flex: 1;
+}
+
+.skills-category {
 	margin-bottom: 1rem;
-	color: var(--primary);
+	background-color: rgba(26, 29, 41, 0.4);
+	border-radius: 12px;
+	padding: 1.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category h4 {
+	font-size: 1.2rem;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	color: var(--primary-light);
+	position: relative;
+	padding-bottom: 0.8rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.frontend-category h4 {
+	color: var(--primary-light);
+}
+
+.backend-category h4 {
+	color: #f26d78; /* Red-ish color */
+}
+
+.tools-category h4 {
+	color: #0dd3a3; /* Teal/green color */
 }
 
 .skills-list {
-	list-style: none;
-	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
-.skills-list li {
-	margin-bottom: 0.8rem;
-	color: var(--text-secondary);
-	position: relative;
-	padding-left: 1.5rem;
-	transition: transform 0.3s ease, color 0.3s ease;
+.skill-item {
+	transition: transform 0.3s ease;
 }
 
-.skills-list li:hover {
+.skill-item:hover {
 	transform: translateX(5px);
-	color: var(--text-primary);
 }
 
-.skills-list li::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
+.skill-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.skill-name {
+	font-size: 1rem;
+	color: var(--text-secondary);
+}
+
+/* Skill level dots */
+.skill-level {
+	display: flex;
+	gap: 4px;
+}
+
+.level-dot {
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background-color: var(--primary);
-	transition: background-color 0.3s ease;
+	background-color: rgba(255, 255, 255, 0.1);
+	position: relative;
+	transition: all 0.3s ease;
 }
 
-.skills-list li:hover::before {
-	background-color: var(--primary-light);
+/* Different colors for different categories */
+.frontend-category .level-dot.active {
+	background-color: var(--primary); /* Purple */
+}
+
+.backend-category .level-dot.active {
+	background-color: #f26d78; /* Red-ish */
+}
+
+.tools-category .level-dot.active {
+	background-color: #0dd3a3; /* Teal/green */
+}
+
+/* Animation for level dots */
+.skill-item {
+	opacity: 0;
+	transform: translateX(-20px);
+}
+
+.animate.visible .skill-item {
+	animation: fadeInRight 0.5s forwards;
+}
+
+@keyframes fadeInRight {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Stagger the animations */
+.skills-list .skill-item:nth-child(1) {
+	animation-delay: 0.1s;
+}
+.skills-list .skill-item:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.skills-list .skill-item:nth-child(3) {
+	animation-delay: 0.3s;
+}
+.skills-list .skill-item:nth-child(4) {
+	animation-delay: 0.4s;
+}
+.skills-list .skill-item:nth-child(5) {
+	animation-delay: 0.5s;
+}
+.skills-list .skill-item:nth-child(6) {
+	animation-delay: 0.6s;
+}
+.skills-list .skill-item:nth-child(7) {
+	animation-delay: 0.7s;
+}
+.skills-list .skill-item:nth-child(8) {
+	animation-delay: 0.8s;
 }
 
 /* Animation styles for intersection observer */
@@ -152,7 +300,7 @@
 	transform: translateY(0);
 }
 
-/* Apply different transition delays for elements */
+/* Apply different transition delays */
 .about .animate:nth-child(2) {
 	transition-delay: 0.2s;
 }
@@ -163,23 +311,35 @@
 
 /* Media Queries */
 @media (max-width: 992px) {
+	.about {
+		padding: 5rem 0;
+	}
+
 	.about-content {
 		gap: 3rem;
 	}
 
-	.skills-grid {
-		grid-template-columns: repeat(2, 1fr);
+	.section-title {
+		font-size: 2.2rem;
 	}
 
 	.about-paragraph {
 		font-size: 1rem;
 	}
+
+	.skills-container {
+		gap: 1.5rem;
+	}
 }
 
 @media (max-width: 768px) {
+	.about {
+		padding: 4rem 0;
+	}
+
 	.about-content {
 		flex-direction: column;
-		gap: 2rem;
+		gap: 2.5rem;
 	}
 
 	.about-text {
@@ -189,14 +349,42 @@
 	.about-skills {
 		order: 2;
 	}
+
+	.secondary-skills {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 }
 
 @media (max-width: 576px) {
-	.skills-grid {
-		grid-template-columns: 1fr;
+	.about {
+		padding: 3rem 0;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
 	}
 
 	.about-paragraph {
 		font-size: 0.95rem;
+		line-height: 1.7;
+	}
+
+	.skills-title {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.skill-name {
+		font-size: 0.9rem;
+	}
+
+	.level-dot {
+		width: 6px;
+		height: 6px;
 	}
 }

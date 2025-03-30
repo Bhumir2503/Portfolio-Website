@@ -1,82 +1,9 @@
 /* Footer.css - Dark Theme */
 .footer {
 	background-color: var(--bg-tertiary);
-	padding: 4rem 0 2rem;
+	padding-right: 4rem;
+	padding-left: 4rem;
 	border-top: 1px solid var(--border);
-}
-
-.footer-container {
-	display: flex;
-	flex-direction: column;
-}
-
-.footer-content {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 3rem;
-}
-
-.footer-logo h3 {
-	font-size: 2rem;
-	color: var(--primary);
-	margin-bottom: 0.5rem;
-}
-
-.footer-logo .logo-dot {
-	color: var(--secondary);
-}
-
-.footer-tagline {
-	font-size: 1rem;
-	color: var(--text-secondary);
-	margin-bottom: 1.5rem;
-}
-
-.footer-links {
-	display: flex;
-}
-
-.footer-links-column {
-	margin-left: 4rem;
-}
-
-.footer-links-column h4 {
-	font-size: 1.1rem;
-	margin-bottom: 1.2rem;
-	color: var(--text-primary);
-	position: relative;
-}
-
-.footer-links-column h4::after {
-	content: "";
-	position: absolute;
-	width: 30px;
-	height: 2px;
-	background-color: var(--primary);
-	bottom: -8px;
-	left: 0;
-	border-radius: 2px;
-}
-
-.footer-links-column ul {
-	list-style: none;
-	padding: 0;
-}
-
-.footer-links-column ul li {
-	margin-bottom: 0.8rem;
-}
-
-.footer-links-column ul li a {
-	color: var(--text-secondary);
-	transition: color var(--transition-base), transform var(--transition-base);
-	font-size: 0.95rem;
-	display: inline-block;
-}
-
-.footer-links-column ul li a:hover {
-	color: var(--primary);
-	transform: translateX(5px);
 }
 
 .footer-bottom {
@@ -84,6 +11,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 2rem;
+	padding-bottom: 1rem;
 	border-top: 1px solid var(--border);
 }
 
@@ -106,7 +34,7 @@
 
 .back-to-top:hover {
 	background-color: var(--primary-light);
-	transform: translateY(-3px);
+	transform: translateY(-5px);
 	box-shadow: 0 6px 15px rgba(98, 70, 234, 0.4);
 }
 
@@ -123,9 +51,9 @@
 	border: solid white;
 	border-width: 0 2px 2px 0;
 	display: inline-block;
-	padding: 3px;
 	transform: rotate(-135deg);
-	margin-top: 4px;
+	margin-right: 8px;
+	margin-top: 8px;
 }
 
 /* Media Queries */
